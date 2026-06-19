@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FineFabriq - T-Shirt Printing & Manufacturer in Chennai | Custom T-Shirts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7d2e3d', // Maroon from your style
+                        accent: '#e8b75f', // Gold accent
+                        bgGradient: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 font-sans antialiased">
+    <!-- Navigation -->
+    <!-- Navigation with Logo -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-md shadow-lg z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Image -->
+                <a href="#home" class="block">
+                    <img src="Fine_Fabriq-removebg-preview.png" alt="FineFabriq Logo" 
+                         class="h-12 md:h-16 w-auto object-contain drop-shadow-lg hover:scale-105 transition-transform duration-200">
+                </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary font-medium transition">Home</a>
+                    
+                    <a href="#products" class="nav-link text-gray-700 hover:text-primary font-medium transition">Products</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-primary font-medium transition">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary font-medium transition">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-primary">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4 space-y-2">
+                <a href="#home" class="block px-4 py-2 text-gray-700 hover:text-primary nav-link">Home</a>
+                <a href="#services" class="block px-4 py-2 text-gray-700 hover:text-primary nav-link">Services</a>
+                <a href="#products" class="block px-4 py-2 text-gray-700 hover:text-primary nav-link">Products</a>
+                <a href="#about" class="block px-4 py-2 text-gray-700 hover:text-primary nav-link">About</a>
+                <a href="#contact" class="block px-4 py-2 text-gray-700 hover:text-primary nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+<section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="Bg.jpg"
+             alt="T-Shirt Manufacturing Background" 
+             class="w-full h-full object-cover object-center brightness-50">
+        <!-- Overlay for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40"></div>
+    </div>
+    
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center text-white animate-fade-in">
+        <h1 class="text-5xl md:text-5xl font-bold mb-6 drop-shadow-2xl leading-tight">
+            The Best Place to find what you're looking for !
+        </h1>
+        
+        <a href="#contact" class="inline-block bg-accent text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-2xl hover:shadow-3xl hover:-translate-y-1 transform">
+            Contact Us
+        </a>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary mb-16">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition text-center">
+                    <i class="fas fa-tshirt text-5xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">T-Shirt Printing</h3>
+                    <p>Screen printing for bulk, DTG for detailed designs. Vibrant, durable prints.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition text-center">
+                    <i class="fas fa-scissors text-5xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Embroidery</h3>
+                    <p>Intricate logos and patterns for corporate wear, teams, gifts.</p>
+                </div>
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition text-center">
+                    <i class="fas fa-industry text-5xl text-accent mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Manufacturing</h3>
+                    <p>High-quality cotton, polyester blends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+<section id="products" class="py-20 bg-gradient-to-br from-slate-100 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-primary mb-16">Our Products</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openCollarModal()">
+                <img src="Collar/Collar.jpeg" alt="Collar T-Shirt" class="w-full h-64 object-contain bg-white rounded-xl mb-4">
+                <h3 class="text-xl font-semibold text-primary">Collar T-Shirts</h3>
+                <p>Professional polo style. Explore brands →</p>
+            </div>
+            <!-- Other products unchanged -->
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openRoundNeckModal()">
+    <img src="Round Neck Tshirt/Round.jpeg" alt="Round Neck" class="w-full h-64 object-contain bg-white rounded-xl mb-4">
+    <h3 class="text-xl font-semibold text-primary">Round Neck T-Shirts</h3>
+    <p>Casual comfort. Explore brands →</p>
+</div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition cursor-pointer" onclick="openJacketsModal()">
+    <img src="Hoodies/Hoodies.jpeg" alt="Jackets" class="w-full h-64 object-contain bg-white rounded-xl mb-4">
+    <h3 class="text-xl font-semibold text-primary">Hoodies</h3>
+    <p>Explore varieties →</p>
+</div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Collar T-Shirts Modal (4 Brands Complete) -->
+<div id="collar-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-6xl max-h-[95vh] overflow-y-auto shadow-2xl w-full mx-4">
+        <div class="p-8 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold text-primary">Collar T-Shirts Catalogue</h2>
+                <button onclick="closeCollarModal()" class="text-3xl hover:text-red-500 font-bold">&times;</button>
+            </div>
+        </div>
+        <div class="p-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            
+            <!-- BRAND 1: Fling -->
+            <div class="group cursor-pointer bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent" onclick="openVarietyModal('Fling')">
+                <div class="w-40 h-48 bg-white rounded-2xl mx-auto mb-3 flex items-center justify-center shadow-lg">
+                    <img src="Collar/Fling/Fling.jpeg" alt="Fling" class="w-90 h-90 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Fling</h4>
+                <p class="text-center text-gray-700 mb-6">Premium collar T-Shirts for all occasions</p>
+                <div class="text-center">
+                    <span class="bg-accent/20 text-accent px-4 py-1 rounded-full text-sm font-semibold">3 Varieties</span>
+                </div>
+            </div>
+
+            <!-- BRAND 2: Scott International -->
+            <div class="group cursor-pointer bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent" onclick="openVarietyModal('Scott International')">
+                <div class="w-40 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Collar/Scott International/Scott.jpeg" alt="Scott International" class="w-40 h-40 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Scott International</h4>
+                <p class="text-center text-gray-700 mb-6">Formal business collar collection</p>
+                <div class="text-center">
+                    <span class="bg-accent/20 text-accent px-4 py-1 rounded-full text-sm font-semibold">3 Varieties</span>
+                </div>
+            </div>
+
+            <!-- BRAND 3: Ruffty -->
+            <div class="group cursor-pointer bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent" onclick="openVarietyModal('Ruffty')">
+                <div class="w-40 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Collar/Ruffty/Ruffty.jpeg" alt="Ruffty" class="w-100 h-100 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Ruffty</h4>
+                <p class="text-center text-gray-700 mb-6">Luxury Polo T-Shirts</p>
+                <div class="text-center">
+                    <span class="bg-accent/20 text-accent px-4 py-1 rounded-full text-sm font-semibold">Varieties</span>
+                </div>
+            </div>
+
+            <!-- BRAND 4: Gold Coast -->
+            <div class="group cursor-pointer bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent" onclick="openVarietyModal('Gold Coast')">
+                <div class="w-40 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Collar/Gold Coast/GC.jpeg" alt="Gold Coast" class="w-150 h-150 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Gold Coast</h4>
+                <p class="text-center text-gray-700 mb-6">Performance athletic collars</p>
+                <div class="text-center">
+                    <span class="bg-accent/20 text-accent px-4 py-1 rounded-full text-sm font-semibold">4 Varieties</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+            <!-- Variety PDFs Sub-Modal (Dynamic for All Brands) -->
+<div id="variety-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white/95 rounded-3xl max-w-6xl max-h-[95vh] overflow-y-auto shadow-2xl w-full mx-4 backdrop-blur-xl">
+        <div class="p-8 border-b border-gray-200 sticky top-0 bg-white/100 z-10">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 id="variety-title" class="text-3xl font-bold text-primary mb-1">Loading Varieties...</h2>
+                    <p id="variety-desc" class="text-gray-600">Select your style</p>
+                </div>
+                <button onclick="closeVarietyModal()" class="text-3xl hover:text-red-500 font-bold p-2 rounded-xl hover:bg-red-50 transition">&times;</button>
+            </div>
+        </div>
+        <div id="variety-grid" class="p-8 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Dynamic content loaded by JS -->
+        </div>
+    </div>
+</div><!-- Round Neck T-Shirts Modal -->
+<div id="roundneck-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-6xl max-h-[95vh] overflow-y-auto shadow-2xl w-full mx-4">
+        <div class="p-8 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold text-primary">Round Neck T-Shirts Catalogue</h2>
+                <button onclick="closeRoundNeckModal()" class="text-3xl hover:text-red-500 font-bold">&times;</button>
+            </div>
+        </div>
+
+        <div class="p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+            <div class="group cursor-pointer bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent"
+                 onclick="openRoundNeckPDF('Round Neck/Jockey/Jockey Catalogue.pdf')">
+                <div class="w-45 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Round Neck Tshirt/Round.jpeg" alt="Jockey" class="w-32 h-32 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Fling</h4>
+                <p class="text-center text-gray-700 mb-6">Premium round neck everyday wear</p>
+                <button onclick="openRoundNeckPDF('Round Neck Tshirt/Fling 180gsm RN.pdf'); event.stopPropagation();"
+        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue
+</button>
+            </div>
+
+            <div class="group cursor-pointer bg-gradient-to-br from-red-50 to-pink-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent"
+                 onclick="openRoundNeckPDF('Round Neck/Scott/Scott Round Neck.pdf')">
+                <div class="w-45 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Round Neck Tshirt/IRun.jpeg" alt="Scott" class="w-32 h-32 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">DryFit IRun</h4>
+                <p class="text-center text-gray-700 mb-6">Corporate and casual round neck styles</p>
+                <button onclick="openRoundNeckPDF('Round Neck Tshirt/Scott RN Dryfit IRun.pdf'); event.stopPropagation();"
+        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue
+</button>
+            </div>
+
+            <div class="group cursor-pointer bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent"
+                 onclick="openRoundNeckPDF('Round Neck/Ruffty/Ruffty Round Neck.pdf')">
+                <div class="w-45 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Round Neck Tshirt/DryFit.jpeg" alt="Ruffty" class="w-32 h-32 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">DryFit</h4>
+                <p class="text-center text-gray-700 mb-6">Trendy round neck T-shirts</p>
+                <button onclick="openRoundNeckPDF('Round Neck TShirt/Scott RN DryFit.pdf'); event.stopPropagation();"
+        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue
+</button>
+            </div>
+
+            <div class="group cursor-pointer bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent"
+                 onclick="openRoundNeckPDF('Round Neck/Gold Coast/Gold Coast Round Neck.pdf')">
+                <div class="w-45 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Round Neck Tshirt/Bio.jpeg" alt="Gold Coast" class="w-32 h-32 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Super Bio</h4>
+                <p class="text-center text-gray-700 mb-6">Premium printed and plain round necks</p>
+                <button onclick="openRoundNeckPDF('Round Neck TShirt/Scott RN Super Bio.pdf'); event.stopPropagation();"
+        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue
+</button>
+            </div>
+
+            <div class="group cursor-pointer bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent"
+                 onclick="openRoundNeckPDF('Round Neck/Gold Coast/Gold Coast Round Neck.pdf')">
+                <div class="w-45 h-48 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                    <img src="Round Neck Tshirt/WashCot.jpeg" alt="Gold Coast" class="w-32 h-32 object-contain">
+                </div>
+                <h4 class="text-2xl font-bold text-primary text-center mb-3">Bio Wash Cot</h4>
+                <p class="text-center text-gray-700 mb-6">Premium printed and plain round necks</p>
+                <button onclick="openRoundNeckPDF('Round Neck TShirt/Scott Bio Wash Cot  RN.pdf'); event.stopPropagation();"
+        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue PDF
+</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Custom Jackets Modal -->
+<div id="jackets-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-4xl max-h-[95vh] overflow-y-auto shadow-2xl w-full mx-4">
+        <div class="p-8 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <div class="flex justify-between items-center">
+                <h2 class="text-3xl font-bold text-primary">Hoodies Catalogue</h2>
+                <button onclick="closeJacketsModal()" class="text-3xl hover:text-red-500 font-bold">&times;</button>
+            </div>
+        </div>
+
+        <div class="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Jacket Brand 1 -->
+            <div class="group cursor-pointer bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent flex flex-col justify-between">
+                <div>
+                    <div class="w-48 h-52 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                        <img src="Hoodies/Zip.jpeg" alt="WinterPro" class="w-36 h-36 object-contain">
+                    </div>
+                    <h4 class="text-2xl font-bold text-primary text-center mb-3">With Zip</h4>
+                    <p class="text-center text-gray-700 mb-6">Premium Hoodies for teams and casual wear</p>
+                </div>
+
+                <button onclick="openJacketsPDF('Hoodies/Fling With Zip.pdf'); event.stopPropagation();"
+                    class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+                    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue PDF
+                </button>
+            </div>
+
+            <!-- Jacket Brand 2 -->
+            <div class="group cursor-pointer bg-gradient-to-br from-orange-50 to-amber-50 p-8 rounded-2xl hover:shadow-2xl transition-all hover:scale-105 border-4 border-transparent hover:border-accent flex flex-col justify-between">
+                <div>
+                    <div class="w-48 h-52 bg-white rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
+                        <img src="Hoodies/Without_zip.jpeg" alt="UrbanWear" class="w-36 h-36 object-contain">
+                    </div>
+                    <h4 class="text-2xl font-bold text-primary text-center mb-3">Without Zip</h4>
+                    <p class="text-center text-gray-700 mb-6">Stylish and casual Hoodies</p>
+                </div>
+
+                <button onclick="openJacketsPDF('Hoodies/Fling Without Zip.pdf'); event.stopPropagation();"
+                    class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+                    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue PDF
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-primary mb-16">Why FineFabriq?</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">Leading T-Shirt manufacturer in Chennai (Villivakkam). Premium fabrics, eco-friendly inks, 7-10 day delivery, rush orders available.</p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Min 10 pcs order</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Screen, DTG, Embroidery</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Bulk for events/corporate</li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-br from-primary to-red-600 text-white p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold">100%</div>
+                        <div>Cotton Options</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-accent to-yellow-400 text-primary p-6 rounded-xl text-center">
+                        <div class="text-3xl font-bold">7-10</div>
+                        <div>Days Delivery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-indigo-500 to-blue-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">Get Your Custom Quote</h2>
+            <form id="contact-form" class="max-w-lg mx-auto space-y-6">
+                <input type="text" placeholder="Your Name" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent">
+                <input type="email" placeholder="Email" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent">
+                <textarea placeholder="Design Idea / Quantity" rows="5" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                <button type="submit" class="w-full bg-accent text-primary p-4 rounded-xl text-lg font-semibold hover:bg-yellow-400 transition shadow-xl">Send Inquiry</button>
+            </form>
+            <div class="text-center mt-12 text-lg">
+                <p>No.6, DABC Complex MTH Road Villivakkam, Chennai 600049, Tamil Nadu, India</p>
+                <p class="mt-2">Phone: +91-8056262008 | Email: finefabriq@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 FineFabriq. All rights reserved. | T-Shirt Printing & Manufacturing in Chennai.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling and nav highlight
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-primary', 'font-semibold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'font-semibold');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Form submission (EmailJS or console for demo)
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Inquiry sent! (Integrate EmailJS for real emails - matches your past prefs)[cite:3]');
+            e.target.reset();
+        });
+
+        // Fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        document.querySelectorAll('section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s, transform 0.6s';
+            observer.observe(el);
+        });
+        // Collar T-Shirts Modal Functions
+function openCollarModal() {
+    document.getElementById('collar-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent scroll
+}
+// Brand Data (4 Brands with Varieties)
+const brandData = {
+    'Fling': {
+        desc: 'Premium cotton polos for corporate & casual wear', 
+        varieties: [
+            {name: 'HAYATI', img: './Collar/Fling/Hayati.jpeg', pdf: './Collar/Fling/200 GSM HAYATI BASICS.pdf'},
+            {name: 'FLING', img: './Collar/Fling/Fling.jpeg', pdf: './Collar/Fling/250 GSM FLING ( PREMIUM)_.pdf'},
+            {name: 'MEXMY', img: './Collar/Fling/Mexmy.jpeg', pdf: './Collar/Fling/220 GSM MEXMY   (1).pdf'},
+            ]
+    },
+    'Scott International': {
+        desc: 'Organic and High Quality T-Shirts',
+        varieties: [
+            {name: 'Scott Organic T-Shirt', img: './Collar/Scott International/Organic Polo.jpeg', pdf: './Collar/Scott International/Scott Organic T.Shirt Pdf.pdf'},
+            {name: 'Golfer Catalogue', img: './Collar/Scott International/Golfer.jpeg', pdf: './Collar/Scott International/GOLFER CATALOGUE only product.pdf'},
+            {name: 'Scott Green Polo', img: './Collar/Scott International/Green Polo.jpeg', pdf: './Collar/Scott International/Scott Green Polo.pdf'}
+        ]
+    },
+    'Ruffty': {
+        desc: 'Oversized T-shirts and stylish collar polos',
+        varieties: [
+            {name: 'Ruffty T-Shirt', img: './Collar/Ruffty/Ruffty.jpeg', pdf: './Collar/Ruffty/Ruffty Catalogue.pdf'}
+        ]
+    },
+    'Gold Coast': {
+
+        desc: 'Premium custom apparel and collar T-shirts',
+        varieties: [
+            {name: 'Gold Coast 101', img: './Collar/Gold Coast/GC.jpeg', pdf: './Collar/Gold Coast/Gold Coast 101.pdf'},
+            {name: 'Gold Coast 201', img: './Collar/Gold Coast/201.jpeg', pdf: './Collar/Gold Coast/Gold Coast 201.pdf'},
+            {name: 'Gold Coast 301', img: './Collar/Gold Coast/301.jpeg', pdf: './Collar/Gold Coast/Gold Coast 301.pdf'},
+            {name: 'Gold Coast T301', img: './Collar/Gold Coast/T301.jpeg', pdf: './Collar/Gold Coast/Gold Coast T301.pdf'}
+        ]
+    }
+};
+
+
+// Modal Functions (Complete)
+function openCollarModal() {
+    document.getElementById('collar-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCollarModal() {
+    document.getElementById('collar-modal').classList.add('hidden');
+    closeVarietyModal();
+    document.body.style.overflow = 'auto';
+}
+
+function openVarietyModal(brandName) {
+    const data = brandData[brandName];
+    if (!data) return;
+    
+    document.getElementById('variety-title').textContent = `${brandName} Catalogue`;
+    document.getElementById('variety-desc').textContent = data.desc;
+    
+    const grid = document.getElementById('variety-grid');
+    grid.innerHTML = '';
+    
+    data.varieties.forEach(variety => {
+        const card = `
+            <div class="group cursor-pointer hover:bg-gradient-to-br from-gray-50 to-blue-50 p-6 rounded-2xl border-2 border-gray-200 hover:border-accent hover:shadow-xl transition-all hover:-translate-y-2">
+                <img src="${variety.img}" alt="${variety.name}" class="w-full h-40 object-cover rounded-xl mb-4 shadow-lg group-hover:scale-105 transition-transform">
+                <h5 class="text-xl font-bold text-primary mb-2">${variety.name}</h5>
+                <p class="text-sm text-gray-600 mb-4">${variety.desc || 'High quality collar T-shirt'}</p>
+                <button onclick="openPDF('${variety.pdf}'); event.stopPropagation();" 
+                        class="w-full bg-gradient-to-r from-primary to-red-600 text-white py-3 px-6 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all transform">
+                    <i class="fas fa-file-pdf mr-2"></i>Open Catalogue PDF
+                </button>
+            </div>
+        `;
+        grid.innerHTML += card;
+    });
+    
+    document.getElementById('variety-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVarietyModal() {
+    document.getElementById('variety-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function openPDF(pdfUrl) {
+    window.open(pdfUrl, '_blank');
+}
+
+function openRoundNeckModal() {
+    document.getElementById('roundneck-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeRoundNeckModal() {
+    document.getElementById('roundneck-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function openRoundNeckPDF(pdfUrl) {
+    window.open(pdfUrl, '_blank');
+}
+
+document.getElementById('roundneck-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'roundneck-modal') closeRoundNeckModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeRoundNeckModal();
+    }
+});
+
+function openJacketsModal() {
+    document.getElementById('jackets-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeJacketsModal() {
+    document.getElementById('jackets-modal').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+}
+
+function openJacketsPDF(pdfUrl) {
+    window.open(pdfUrl, '_blank');
+}
+
+document.getElementById('jackets-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'jackets-modal') closeJacketsModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeJacketsModal();
+    }
+});
+
+// Close modals on outside/ESC (unchanged from previous)
+document.getElementById('collar-modal').addEventListener('click', (e) => { if (e.target.id === 'collar-modal') closeCollarModal(); });
+document.getElementById('variety-modal').addEventListener('click', (e) => { if (e.target.id === 'variety-modal') closeVarietyModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeCollarModal(); closeVarietyModal(); } });
+
+
+    </script>
+</body>
+</html>
