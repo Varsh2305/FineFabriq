@@ -367,16 +367,52 @@
         </div>
     </section>
 
+    
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-r from-indigo-500 to-blue-600 text-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-16">Get Your Custom Quote</h2>
-            <form id="contact-form" class="max-w-lg mx-auto space-y-6">
-                <input type="text" placeholder="Your Name" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent">
-                <input type="email" placeholder="Email" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent">
-                <textarea placeholder="Design Idea / Quantity" rows="5" required class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
-                <button type="submit" class="w-full bg-accent text-primary p-4 rounded-xl text-lg font-semibold hover:bg-yellow-400 transition shadow-xl">Send Inquiry</button>
-            </form>
+<section id="contact" class="py-20 bg-gradient-to-r from-indigo-500 to-blue-600 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16">Get Your Custom Quote</h2>
+
+        <form id="contact-form" class="max-w-lg mx-auto space-y-6">
+            <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                required
+                class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+
+            <input
+                type="email"
+                name="from_email"
+                placeholder="Email"
+                required
+                class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+
+            <input
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+
+            <textarea
+                name="message"
+                placeholder="Design Idea / Quantity"
+                rows="5"
+                required
+                class="w-full p-4 rounded-xl bg-white/20 backdrop-blur text-white placeholder-white/80 focus:outline-none focus:ring-2 focus:ring-accent"
+            ></textarea>
+
+            <button
+                id="submit-btn"
+                type="submit"
+                class="w-full bg-accent text-primary p-4 rounded-xl text-lg font-semibold hover:bg-yellow-400 transition shadow-xl"
+            >
+                Send Inquiry
+            </button>
+        </form>
             <div class="text-center mt-12 text-lg">
                 <p>No.6, DABC Complex MTH Road Villivakkam, Chennai 600049, Tamil Nadu, India</p>
                 <p class="mt-2">Phone: +91-8056262008 | Email: finefabriq@gmail.com</p>
@@ -422,12 +458,7 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Form submission (EmailJS or console for demo)
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Inquiry sent! (Integrate EmailJS for real emails - matches your past prefs)[cite:3]');
-            e.target.reset();
-        });
+        
 
         // Fade-in animation
         const observer = new IntersectionObserver((entries) => {
@@ -591,5 +622,41 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeCol
 
 
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    emailjs.init({
+        publicKey: "UV5711Rb41ufPYj-X"
+    });
+
+    const contactForm = document.getElementById("contact-form");
+    const submitBtn = document.getElementById("submit-btn");
+
+    contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        emailjs.sendForm(
+            "service_hee8scr",
+            "template_oi0yv29",
+            this
+        )
+        .then(function () {
+            alert("Inquiry sent successfully!");
+            contactForm.reset();
+        })
+        .catch(function (error) {
+            console.error("EmailJS error:", error);
+            alert("Failed to send inquiry. Please check your EmailJS setup.");
+        })
+        .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Inquiry";
+        });
+    });
+</script>
 </body>
 </html>
